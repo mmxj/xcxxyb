@@ -1,0 +1,28 @@
+/* component/tabbar/tabbar.wxss */
+.tabbar{
+  height: 100rpx;
+  color: #555;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  justify-content:space-between;
+  border-top: 1rpx #eee solid;
+   box-sizing: border-box;
+  
+}
+.tabbar .tabbar-item{
+  line-height: 28rpx;
+  font-size: 22rpx;
+  color: #555;
+  width: 30%;
+  text-align: center;
+  padding-top:12rpx;
+  box-sizing: border-box;
+}
+.tabbar-icon image{
+  width:50rpx;
+  height: 50rpx;
+}
+.active{
+  color: #27b7fe
+}

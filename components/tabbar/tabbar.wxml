@@ -1,0 +1,21 @@
+<!--component/tabbar/tabbar.wxml-->
+<view class="tabbar">
+  <view bindtap="gopage" class="tabbar-item" data-url='/pages/index/index' >
+    <view class="tabbar-icon">
+      <image src="{{chooseBar==1?'../../assets/img/home_home_selected.png':'../../assets/img/home_home_normal.png'}}"></image>
+    </view>
+    <view class="{{chooseBar==1?'active':''}}">首页</view>
+  </view>
+  <view bindtap="gopage" class="tabbar-item"   data-url='/pages/paycode/paycode' >
+      <view class="tabbar-icon">
+       <image src="{{chooseBar==2?'../../assets/img/home_paycode_selected.png':'../../assets/img/home_paycode_normal.png'}}"></image>
+      </view>
+      <view class="{{chooseBar==2?'active':''}}">扫码</view>
+  </view>
+  <view bindtap="gopage" class="tabbar-item"  data-url='/pages/my/my' >
+      <view class="tabbar-icon">
+      <image src="{{chooseBar==3?'../../assets/img/home_my_selected.png':'../../assets/img/home_my_normal.png'}}"></image>
+      </view>
+      <view class="{{chooseBar==3?'active':''}}">我的</view>
+  </view>
+</view>

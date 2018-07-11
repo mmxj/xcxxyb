@@ -1,0 +1,12 @@
+<!--pages/my/my.wxml-->
+<view class="container">
+  <scroll-view class="{{isIphoneX?'centerIphonex':'center'}}" >
+      我的
+      <!-- <button open-type="getUserInfo" bindtap="getUser">授权</button> -->
+  </scroll-view>
+  <view class="{{isIphoneX?'tabbarIphonex':'tabbar'}}">
+    <TabBar></TabBar>
+  </view>
+   
+</view>
+

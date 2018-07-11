@@ -1,0 +1,22 @@
+/* pages/my/my.wxss */
+.tabbar{
+  width: 100%;
+  height: 100rpx;
+  background: #fff;
+}
+.tabbarIphonex{
+  padding-bottom:68rpx;
+  width: 100%;
+  height: 100rpx;
+  background: #fff;
+}
+.center{
+    width: 100%;
+    height: calc(100% - 100rpx);
+    align-self:flex-start;
+}
+.centerIphonex{
+  width:100%;
+  height:calc(100% - 168rpx);
+ align-self:flex-start;
+}

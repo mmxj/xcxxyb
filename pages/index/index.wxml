@@ -1,0 +1,52 @@
+<!--index.wxml-->
+<view class="container">
+  <scroll-view class="{{isIphoneX?'centerIphonex':'center'}}" scroll-y="{{true}}" >
+      <swiper indicator-dots="{{true}}"
+      autoplay="{{false}}"
+      >
+      <block wx:for="{{data}}" wx:key="{{item.id}}">
+          <swiper-item>
+          <image src="http://www.yxunionpay.com:8087/yxsj-openapi-web/openapi/download/download.do?download_type=1&file_name={{item.imageDownloadUrl}}" class="slide-image"></image>
+          </swiper-item>
+      </block> 
+      </swiper>
+      <view class="tab-list">
+          <view class="tab-list-item"> 
+            <image src="../../assets/img/waittingpay.png"></image>
+            <view class="button-title">待付订单</view>
+          </view>
+          <view class="tab-list-item">
+            <image src="../../assets/img/socialsecuritysearch.png"></image>
+            <view class="button-title">社保查询</view>
+          </view>
+          <view class="tab-list-item">
+             <image src="../../assets/img/socialsecuritypay.png"></image>
+              <view class="button-title">社保缴费</view>
+          </view>
+      </view>
+      <view class="article">
+        <view class="title">
+          <view class="title-content">资讯</view> 
+          <view class="more">更多<image src="../../assets/img/enter.png"></image></view>
+        </view>
+        <view class="article-list">
+
+          <view class="article-list-item" wx:for="{{articleData}}" wx:key="{{item.id}}">
+            <view class="article-list-item-content">
+                <view class="article-list-item-title">
+                  {{item.title}}
+                </view>
+                <view class="article-list-item-time">2018-04-10 12:10:11</view>
+            </view>
+            <view class="article-list-itme-banner">
+              <image src="http://www.yxunionpay.com:8087/yxsj-openapi-web/openapi/download/download.do?download_type=2&file_name={{item.thumbImage}}"></image>
+            </view>
+          </view>
+
+        </view>
+      </view>
+  </scroll-view>
+  <view class="{{isIphoneX?'tabbarIphonex':'tabbar'}}">
+    <TabBar></TabBar>
+  </view>
+</view>

@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/my/my",
+    "pages/paycode/paycode"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#27b7fe",
+    "navigationBarTitleText": "乡银保",
+    "navigationBarTextStyle": "#fff"
+  }
+}

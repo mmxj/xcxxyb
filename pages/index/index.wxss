@@ -1,0 +1,113 @@
+/**index.wxss**/
+.tabbar{
+  width: 100%;
+  height: 100rpx;
+  background: #fff;
+}
+.tabbarIphonex{
+  padding-bottom:68rpx;
+  width: 100%;
+  height: 100rpx;
+  background: #fff;
+}
+.center{
+    width: 100%;
+    height: calc(100% - 100rpx);
+    align-self:flex-start;
+}
+.centerIphonex{
+  width:100%;
+  height:calc(100% - 168rpx);
+ align-self:flex-start;
+}
+swiper{
+  height: 380rpx;
+}
+.slide-image{
+  width: 100%;
+  height: 100%;
+}
+
+.tab-list{
+  height: 190rpx;
+  display: flex;
+  justify-content:space-between;
+  background: #fff;
+}
+.tab-list-item{
+    width:250rpx;
+    text-align:center; 
+    align-self:center;
+}
+
+.tab-list-item image{
+  width: 110rpx;
+  height:110rpx;
+}
+.tab-list-item .button-title{
+  font-size: 28rpx;
+  color: #404040;
+}
+
+.article{
+  margin-top: 20rpx;
+  background: #fff;
+}
+.article .title{
+    font-size: 28rpx;
+    justify-content:space-between;
+    display: flex;
+    padding: 20rpx;
+    border-bottom: 1rpx solid #f3f3f3;
+}
+.article .title-content{
+  font-size: 32rpx;
+  line-height: 32rpx;
+  padding-left: 8rpx;
+  border-left:8rpx #29bfff solid;
+}
+.article .more{
+  display: flex;
+  align-items:center;/*垂直居中*/
+  color: #999;
+}
+.article .title .more image{
+  margin-left: 6rpx;
+  width: 12rpx;
+  height:26rpx;
+}
+.article-list-item{
+  display: flex;
+  justify-content:space-between;
+  padding: 20rpx;
+  border-bottom: 1rpx solid #f3f3f3;
+
+}
+.article-list-item-content{
+  width: 510rpx;
+  padding: 0 10rpx;
+}
+.article-list-item-title{
+  font-size: 26rpx;
+  line-height: 36rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; 
+  height: 72rpx;
+}
+.article-list-item-time{
+  font-size: 24rpx;
+  color: #999;
+  margin-top: 22rpx;
+}
+.article-list-itme-banner{
+  width:180rpx;
+  height: 120rpx;
+}
+.article-list-itme-banner image{
+  width:100%;
+  height:100%;
+}
