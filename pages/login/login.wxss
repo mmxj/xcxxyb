@@ -1,0 +1,53 @@
+/* pages/login/login.wxss */
+.login{
+  height: 100%;
+  background: #fff;
+}
+.loginlogowrap{
+  text-align: center;
+  padding-top:80rpx; 
+}
+.loginlogowrap image{
+  width: 160rpx;
+  height: 160rpx;
+}
+.loginlogotitle{
+  line-height: 78rpx;
+  font-size: 40rpx;
+  font-weight: 600;
+}
+.form-wrap{
+  padding: 30rpx 50rpx; 
+}
+.input-wrap{
+  background: #f3f3f3;
+  width:650rpx;
+  height: 88rpx;
+  border-radius: 10rpx;
+  display: flex;
+  align-items: center;
+}
+.input-wrap input{
+  width: 575rpx;
+  height: 88rpx;
+}
+.input-wrap image{
+  width:35rpx;
+  height: 44rpx;
+  margin:0 20rpx;
+}
+.input-password{
+  margin: 30rpx 0;
+}
+.button-wrap{
+  padding: 60rpx 50rpx 0;
+}
+.other-button{
+  margin-top: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 4rpx;
+}
+.button-text{
+  color: #999;
+}

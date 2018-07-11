@@ -15,3 +15,16 @@ page{
   justify-content: space-between;
   box-sizing: border-box;
 } 
+image{
+  width:100%;
+  height: 100%;
+}
+
+/* //修改默认按钮颜色 */
+.button-hover[type=primary] {
+  color:#fff;
+  background-color:#27b7fe;
+}
+button[type=primary]{
+  background-color:#27b7fe;
+}

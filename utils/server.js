@@ -12,10 +12,13 @@ const Ajax = (opt) => {
 
     }
   }
-
+  let session = wx.getStorageSync('session');
+  console.log(session);
   if (opt.session) {
     if (!session) {
-      window.location.href = window.location.origin + '/#/index/login';
+      wx.navigateTo({
+        url: '/pages/index/index',
+      })
       return
     }
   }

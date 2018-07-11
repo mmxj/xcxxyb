@@ -1,0 +1,76 @@
+/* pages/login/subpage/signUp/signUp.wxss */
+.sign{
+  height: 100%;
+  background: #fff;
+
+}
+.form-wrap{
+  padding: 30rpx 50rpx; 
+  padding-top: 100rpx;
+}
+.input-wrap{
+  background: #f3f3f3;
+  width:650rpx;
+  height: 88rpx;
+  border-radius: 10rpx;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30rpx;
+}
+
+.input-wrap input{
+  width: 575rpx;
+  height: 88rpx;
+}
+
+
+.input-wrap image{
+  width:35rpx;
+  height: 44rpx;
+  margin:0 20rpx;
+}
+.button-wrap{
+  padding: 20rpx 50rpx;
+}
+.vercode{
+  background: #fff;
+  justify-content: space-between;
+}
+.vercode input{
+  width: 300rpx;
+  height: 88rpx;
+}
+.vercode .getCode{
+  width:248rpx;
+}
+.vercode button{
+  font-size: 28rpx;
+  height: 88rpx;
+  width:248rpx;
+  line-height: 88rpx;
+}
+.vercode-wrap{
+  border-radius: 10rpx;
+  background: #f3f3f3;
+  display: flex;
+  align-items: center
+}
+.vercode image{
+  height: 30rpx;
+}
+.agree{
+ text-align: center;
+ font-size: 26rpx;
+ color: #555;
+ vertical-align: center;
+}
+.agree view{
+  color: #27b7fe;
+  display: inline-block;
+}
+.agreeradio{
+  width: 28rpx;
+  height: 28rpx;
+  margin-right: 4rpx;
+  transform:scale(0.5);
+}

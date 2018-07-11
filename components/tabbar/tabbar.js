@@ -20,7 +20,6 @@ Component({
   methods: {
     gopage:(e)=>{
       let url = e.currentTarget.dataset.url;
-
       wx.redirectTo({url:url})
     }
   },

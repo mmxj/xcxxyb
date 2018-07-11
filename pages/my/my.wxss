@@ -20,3 +20,50 @@
   height:calc(100% - 168rpx);
  align-self:flex-start;
 }
+
+.topBar{
+  background: #27b7fe;
+  height: 168rpx;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  text-align: center;
+}
+.topBar-item{
+  width: 250rpx;
+  color: #fff;
+  font-size: 28rpx;
+  line-height: 40rpx;
+}
+.topBar-item image{
+  width: 64rpx;
+  height: 64rpx;
+}
+.mylistwrap{
+  margin-top:30rpx;
+  background: #fff;
+  padding: 0 32rpx
+}
+.mylist{
+  display: flex;
+  justify-content: space-between;
+  padding: 22rpx 0;
+  align-items: center;
+   border-bottom: 1rpx solid #eee;
+}
+.mylist:last-child{
+  border: 0
+}
+.mylistcontent{
+  display: flex;
+  align-items: center;
+}
+.mylistcontent image{
+  width: 44rpx;
+  height: 44rpx;
+  margin-right: 8rpx;
+}
+.mylistenter image{
+  width:14rpx;
+  height: 28rpx;
+}

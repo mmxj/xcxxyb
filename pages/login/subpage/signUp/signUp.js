@@ -1,23 +1,18 @@
-// pages/my/my.js
-const app = getApp();
+// pages/login/subpage/signUp/signUp.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    radiocheck:false
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // console.log(app.globalData.isIphoneX)
-    this.setData({
-      isIphoneX: app.globalData.isIphoneX
-    })
-    app.globalData.chooseBar = 3;
+  
   },
 
   /**
@@ -68,12 +63,14 @@ Page({
   onShareAppMessage: function () {
   
   },
-  getUser:function(){
-    wx.getUserInfo({
-      success: function (res) {
-        console.log(res)
-      }
+  changeRadio:function(){
+    this.setData({
+      radiocheck: !this.data.radiocheck
+    })
+  },
+  goPage:function(){
+    wx.navigateTo({
+      url:'/pages/login/subpage/signUp/useragree/useragree'
     })
   }
-
 })

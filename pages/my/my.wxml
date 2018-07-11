@@ -1,8 +1,80 @@
 <!--pages/my/my.wxml-->
 <view class="container">
-  <scroll-view class="{{isIphoneX?'centerIphonex':'center'}}" >
-      我的
-      <!-- <button open-type="getUserInfo" bindtap="getUser">授权</button> -->
+  <scroll-view class="{{isIphoneX?'centerIphonex':'center'}}" scroll-y="{{true}}" >
+      <view class="topBar">
+        <view class="topBar-item">
+            <view class="topBar-img">
+              <image src="../../assets/img/my_icon_scan1.png"></image>
+            </view>
+            扫一扫
+        </view>
+         <view class="topBar-item">
+            <view class="topBar-img">
+              <image src="../../assets/img/my_icon_myorder1.png"></image>
+            </view>
+            我的订单
+        </view>
+         <view class="topBar-item">
+          <view class="topBar-img">
+                <image src="../../assets/img/my_icon_cardmanagement1.png"></image>
+            </view>
+            卡管家
+        </view>
+      </view> 
+      <view class="mylistwrap">
+        <view class="mylist">
+            <view class="mylistcontent"> 
+              <image src="../../assets/img/my_icon_myaccount.png"></image>
+            我的账号</view>
+            <view class="mylistenter"><image src="../../assets/img/enter.png"></image></view>
+        </view>
+        <view class="mylist">
+            <view class="mylistcontent"> 
+              <image src="../../assets/img/my_icon_mysocialsecurity@3x.png"></image>
+            我的社保</view>
+            <view class="mylistenter"><image src="../../assets/img/enter.png"></image></view>
+        </view>
+        <view class="mylist">
+            <view class="mylistcontent"> 
+              <image src="../../assets/img/my_icon_medicaltransshipment@3x.png"></image>
+            医疗转运</view>
+            <view class="mylistenter"><image src="../../assets/img/enter.png"></image></view>
+        </view>
+      </view> 
+      <view class="mylistwrap">
+        <view class="mylist">
+            <view class="mylistcontent"> 
+              <image src="../../assets/img/my_icon_share@3x.png"></image>
+            分享乡银保</view>
+            <view class="mylistenter"><image src="../../assets/img/enter.png"></image></view>
+        </view>
+        <view class="mylist">
+            <view class="mylistcontent"> 
+              <image src="../../assets/img/my_icon_view@3x.png"></image>
+            意见反馈</view>
+            <view class="mylistenter"><image src="../../assets/img/enter.png"></image></view>
+        </view>
+        <view class="mylist">
+            <view class="mylistcontent"> 
+              <image src="../../assets/img/my_icon_question@3x.png"></image>
+            常见问题</view>
+            <view class="mylistenter"><image src="../../assets/img/enter.png"></image></view>
+        </view>
+        <view class="mylist">
+            <view class="mylistcontent"> 
+              <image src="../../assets/img/my_icon_aboutus@3x.png"></image>
+            关于我们</view>
+            <view class="mylistenter"><image src="../../assets/img/enter.png"></image></view>
+        </view>
+      </view> 
+      <view class="mylistwrap">
+        <view class="mylist">
+            <view class="mylistcontent"> 
+              <image src="../../assets/img/my_icon_securitysetting@3x.png"></image>
+            设置</view>
+            <view class="mylistenter"><image src="../../assets/img/enter.png"></image></view>
+        </view>
+      </view> 
   </scroll-view>
   <view class="{{isIphoneX?'tabbarIphonex':'tabbar'}}">
     <TabBar></TabBar>

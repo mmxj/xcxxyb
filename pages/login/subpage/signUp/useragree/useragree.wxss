@@ -1,0 +1,22 @@
+/* pages/login/subpage/signUp/useragree/useragree.wxss */
+.useragree{
+  height: 100%;
+  background: #fff;
+  padding: 20rpx 10rpx 20rpx 20rpx;
+  box-sizing: border-box;
+  line-height: 40rpx;
+}
+.useragree view{
+  margin: 20rpx;
+}
+.useragree view.title{
+  font-size: 34rpx;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom:50rpx;
+}
+.title-litter{
+  font-size: 30rpx;
+  font-weight: bold;
+
+}

@@ -1,6 +1,5 @@
 
 const Ajax = require('./server.js');
-
 const formatTime = date => {
   const year = date.getFullYear()
   const month = date.getMonth() + 1
@@ -17,9 +16,19 @@ const formatNumber = n => {
   return n[1] ? n : '0' + n
 }
 
+const IsUserLogin=(app)=>{
+  console.log(app.globalData.user.status);
+  if (!app.globalData.user.status){
+    wx.navigateTo({
+      url: '/pages/login/login',
+    })
+
+  }
+}
 
 module.exports = {
   formatTime: formatTime,
-  Ajax: Ajax
+  Ajax: Ajax,
+  IsUserLogin,
 }
 

@@ -1,9 +1,13 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs",
+    "pages/login/login",
+    "pages/login/subpage/signUp/signUp",
+    "pages/login/subpage/forgetPassword/forgetPassword",
     "pages/my/my",
-    "pages/paycode/paycode"
+    "pages/logs/logs",
+    "pages/paycode/paycode",
+    "pages/login/subpage/signUp/useragree/useragree"
   ],
   "window": {
     "backgroundTextStyle": "light",

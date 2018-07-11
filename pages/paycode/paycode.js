@@ -1,4 +1,5 @@
 // pages/paycode/paycode.js
+const utils = require('../../utils/util');
 const app = getApp(); 
 Page({
   /**
@@ -12,11 +13,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // console.log(app.globalData.isIphoneX)
+    utils.IsUserLogin(app);//验证是否登录
     this.setData({
-      isIphoneX: app.globalData.isIphoneX,
-      chooseBar: 2
-    })
+      isIphoneX: app.globalData.isIphoneX
+    });
+    app.globalData.chooseBar=2;
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -28,7 +29,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+    
   },
 
   /**

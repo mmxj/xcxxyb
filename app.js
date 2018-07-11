@@ -6,9 +6,13 @@ App({
   globalData: {
     userInfo: null,
     isIphoneX: false,
-    chooseBar:1
+    chooseBar:1,
+    user:{//全局保存的用户信息
+      status:false, //判断用户登录状态
+    }
   },
   onShow:function(){
+
     let that = this;
     wx.getSystemInfo({
       success: res => {

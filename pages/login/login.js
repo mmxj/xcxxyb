@@ -1,5 +1,4 @@
-// pages/my/my.js
-const app = getApp();
+// pages/login/login.js
 Page({
 
   /**
@@ -13,11 +12,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // console.log(app.globalData.isIphoneX)
-    this.setData({
-      isIphoneX: app.globalData.isIphoneX
-    })
-    app.globalData.chooseBar = 3;
+  
   },
 
   /**
@@ -68,12 +63,11 @@ Page({
   onShareAppMessage: function () {
   
   },
-  getUser:function(){
-    wx.getUserInfo({
-      success: function (res) {
-        console.log(res)
-      }
+
+  // 跳转其他页面
+  goPage:function(data){
+    wx.navigateTo({
+      url: data.target.dataset.url,
     })
   }
-
 })

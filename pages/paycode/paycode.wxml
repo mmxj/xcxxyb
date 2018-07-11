@@ -1,6 +1,6 @@
 <!--pages/paycode/paycode.wxml-->
 <view class="container">
-  <scroll-view class="{{isIphoneX?'centerIphonex':'center'}}" >
+  <scroll-view class="{{isIphoneX?'centerIphonex':'center'}}" scroll-y="{{true}}" >
       付款码
   </scroll-view>
   <view class="{{isIphoneX?'tabbarIphonex':'tabbar'}}">
