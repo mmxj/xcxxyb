@@ -1,0 +1,29 @@
+<!--pages/my/subpage/cardbutler/addNewCard/addNewCard.wxml-->
+<view class='addNewCard' >
+  <view class='title'>*请添加本人的银行卡,如需添加社保卡请到社保专用终端完成</view>
+  <form bindsubmit='addnewcard'>
+    <view class='list-wrap'>
+      <view class="list-item">
+        <label>身份证 </label>
+        <input placeholder='请输入您本人的身份证号码' name="idCardNo"></input>
+      </view>
+       <view class="list-item">
+        <label>姓名 </label>
+        <input placeholder='请输入您的姓名' name="userName"></input>
+      </view>
+      <view class="list-item">
+        <label>银行卡号 </label>
+        <input placeholder='请输入您的银行卡号码' name="bankAccount"></input>
+      </view>
+       <view class="list-item">
+        <label>银行预留手机号 </label>
+        <input placeholder='请输入您的银行预留手机号' name="mobile"></input>
+      </view>
+    </view>
+    <view class="button-wrap">
+      <button type="primary" form-type='submit'>添加</button>
+    </view>
+  </form>
+  <import src="/components/wxParse/wxParse.wxml" />
+  <template is="wxParse" data="{{wxParseData:DetailInfo.nodes}}" />
+</view>

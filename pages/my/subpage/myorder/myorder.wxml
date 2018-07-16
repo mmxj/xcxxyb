@@ -1,0 +1,15 @@
+<!--pages/my/subpage/myorder/myorder.wxml-->
+<view class="myorder">
+  <view class="list-wrap" id="myOrderListWrap">
+    <view class="list-item" wx:for="{{orderData}}" wx:key="{{item.id}}" bindtap='goPage' data-url="/pages/my/subpage/myorder/orderDetails/orderDetails?id={{item.id}}&no={{item.no}}">
+      <view class="list-left">
+        <view class="title">{{item.companyName}}</view>
+        <view class="time">{{item.sfsCreates}}</view>
+      </view>
+      <view class="list-right">
+        <view class="account">￥{{item.amount/100}}</view>
+        <view class="list-item-button {{item.payStatus==2?'buttonsuccss':''}} {{item.payStatus==6?'defeated':''}}">{{item.payStatusName}}</view>
+      </view>
+    </view>
+  </view>
+</view>

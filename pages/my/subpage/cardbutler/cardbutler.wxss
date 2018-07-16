@@ -1,0 +1,81 @@
+/* pages/my/subpage/cardbutler/cardbutler.wxss */
+.cardbutler{
+  height: 100%;
+}
+.addNewCard{
+  height: 88rpx;
+  background: #fff;
+  line-height: 32rpx;
+  padding: 20rpx;
+  font-size: 32rpx;
+  font-weight: 500;
+  justify-content: space-between;
+  box-sizing: border-box; 
+  display: flex;
+  align-items: center;
+}
+.left{
+  display: flex;
+  align-items:center;
+}
+.left image{
+  width: 28rpx;
+  height: 28rpx;
+  margin-right: 8rpx;
+}
+.addNewCard .right image{
+  width: 16rpx;
+  height: 28rpx;
+}
+.cardlist{
+  padding: 20rpx;
+}
+.list-item{
+  border-radius: 10rpx;
+  padding: 20rpx;
+  background: #d33837;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  margin-bottom:10rpx;
+}
+.list-content{
+ position: relative;
+ z-index: 10;
+}
+.cardname{
+  line-height: 94rpx;
+  display: flex;
+  align-items: center;
+}
+.cardtype{
+  text-align: right;
+}
+.cardname image{
+  width: 58rpx;
+  height: 58rpx;
+  margin-right: 10rpx;
+}
+.list-bg{
+  position: absolute;
+  right: -50rpx;
+  top: 50%;
+  margin-top: -150rpx;
+  width:300rpx;
+  height: 300rpx;
+}
+.card2{
+  background:#64c3eb;
+}
+.model-wrap{
+  text-align: center;
+  font-size: 36rpx;
+  padding:0 30rpx;
+}
+.model-item{
+  line-height: 128rpx;
+  border-bottom: 1rpx solid #eee; 
+}
+.model-item:last-child{
+  border: 0
+}

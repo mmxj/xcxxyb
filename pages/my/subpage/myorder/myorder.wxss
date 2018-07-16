@@ -1,0 +1,46 @@
+/* pages/my/subpage/myorder/myorder.wxss */
+.myorder{
+}
+
+.list-wrap{
+  padding:20rpx;
+}
+.list-item{
+  background: #fff;
+  padding: 20rpx;
+  border-radius: 10rpx;
+  margin-bottom: 10rpx;
+  display: flex;
+  justify-content: space-between; 
+}
+.title{
+  font-size: 32rpx;
+  font-weight: bold;
+  line-height: 66rpx;
+  width: 500rpx;
+}
+.account{
+  font-size: 32rpx;
+  font-weight: bold;
+  line-height: 66rpx;
+  text-align:right;
+}
+.time{
+  color: #999;
+  line-height: 66rpx;
+}
+.list-item-button{
+  /* line-height: 66rpx; */
+   background: #ff4e2c;
+  color: #fff;
+  height: 44rpx;
+  margin-top: 5rpx;
+  border-radius: 10rpx;
+  padding: 5rpx 20rpx;
+}
+.buttonsuccss{
+  background:#27baff;
+}
+.defeated{
+  background: #bbb;
+}

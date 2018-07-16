@@ -1,0 +1,30 @@
+/* pages/my/subpage/myaccount/myaccount.wxss */
+.myaccount{
+  height: 100%;
+}
+.list-wrap{
+  background: #fff;
+  padding: 0 40rpx;
+  margin-top: 30rpx;
+}
+.list{
+  border-bottom: 1rpx solid #eee;
+  line-height: 88rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.list:last-child{
+  border: 0;
+}
+.gray{
+  color: #a7a7a7;
+}
+.list-text{
+  display: flex;
+  align-items: center;
+}
+.list-text image{
+  margin-left: 12rpx;
+  width: 16rpx;
+  height: 28rpx;
+}

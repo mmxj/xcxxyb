@@ -10,7 +10,7 @@
       <view class="tabbar-icon">
        <image src="{{chooseBar==2?'../../assets/img/home_paycode_selected.png':'../../assets/img/home_paycode_normal.png'}}"></image>
       </view>
-      <view class="{{chooseBar==2?'active':''}}">扫码</view>
+      <view class="{{chooseBar==2?'active':''}}">付款码</view>
   </view>
   <view bindtap="gopage" class="tabbar-item"  data-url='/pages/my/my' >
       <view class="tabbar-icon">

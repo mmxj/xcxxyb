@@ -1,5 +1,6 @@
 // pages/my/my.js
 const app = getApp();
+const util = require('../../utils/util.js')
 Page({
 
   /**
@@ -13,11 +14,12 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    app.globalData.chooseBar = 3;
     // console.log(app.globalData.isIphoneX)
     this.setData({
       isIphoneX: app.globalData.isIphoneX
     })
-    app.globalData.chooseBar = 3;
+    
   },
 
   /**
@@ -74,6 +76,19 @@ Page({
         console.log(res)
       }
     })
+  },
+  goPage:function(e){
+    app.goPage(e)
+   
+  },
+  /*扫一扫
+  */
+  scan:function(){
+    wx.scanCode({
+      onlyFromCamera: true,
+      success: (res) => {
+        console.log(res)
+      }
+    })
   }
-
 })

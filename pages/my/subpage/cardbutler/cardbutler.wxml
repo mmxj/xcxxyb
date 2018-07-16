@@ -1,0 +1,33 @@
+<!--pages/my/subpage/cardbutler/cardbutler.wxml-->
+<view class="cardbutler">
+  <view class="cardlist">
+    <view wx:for="{{cardData}}"  wx:key = "{{item.id}}"  class="list-item {{item.cardType === 1 ?'card2':''}}"  bindtap='chooseCard' data-id="{{item.id}}">
+        <view class="list-content">
+          <view class="cardname" >
+            <image src="../../../../assets/bank/logo/{{item.banklogo}}.png"></image> 
+            <text>{{item.bankName}} ({{item.accountLastFour}})</text>
+          </view>
+          <view class="cardtype">
+            <view>{{item.cardTypeName}}</view>
+          </view>
+        </view>
+        <view class="list-bg">
+          <image src="../../../../assets/bank/bg/{{item.bankbg}}.png"></image>
+        </view>
+    </view>  
+  </view>
+  <view class="addNewCard"bindtap='goPage' data-url = "/pages/my/subpage/cardbutler/addNewCard/addNewCard" >
+    <view class="left">
+     <image src="../../../../assets/img/add.png"></image>添加新卡
+    </view>
+    <view class="right"><image src="../../../../assets/img/enter.png"></image></view>
+  </view>
+  <Model class="model" prop-show="{{modelshow}}">
+      <view class="model-wrap">
+        <view>
+         <view class="model-item" bindtap='deleteCard'>撤销银行卡</view>
+         <view class="model-item" bindtap='setDefault'>设为默认消费卡</view>
+        </view>
+      </view>
+   </Model>
+</view>

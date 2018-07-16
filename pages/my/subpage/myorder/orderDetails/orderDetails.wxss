@@ -1,0 +1,80 @@
+/* pages/my/subpage/myorder/orderDetails/orderDetails.wxss */
+.orderDetail{
+  background: #fff;
+  height: 100%;
+}
+.top-card{
+  background: #fff;
+  padding: 20rpx;
+}
+.title{
+  text-align: center;
+  line-height: 70rpx;
+  font-size: 30rpx;
+  color: #333;
+  font-weight: bold;
+}
+.amount{
+  text-align: center;
+  line-height: 70rpx;
+  font-size: 48rpx;
+  color: #333;
+  font-weight: bold;
+}
+.status{
+  font-size: 30rpx;
+  line-height: 36rpx;
+  margin: 22rpx 0;
+  text-align: center;
+  color: #999;
+}
+.list-item{
+  padding: 24rpx 0;
+  display: flex;
+  justify-content: space-between;
+}
+.list-label{
+  padding-left:20rpx;
+  color: #999;
+  line-height: 56rpx;
+  color: 28rpx;
+
+}
+.list-content{
+  padding-right: 20rpx;
+  color: #333;
+  font-weight: bold;
+  max-width: 480rpx;
+  word-wrap:break-word ;
+}
+.line{
+  padding-bottom:30rpx;
+  border-bottom: 1px solid #ddd;
+}
+.back-button{
+  padding: 40rpx;
+}
+.barcode{
+  border-top: 20rpx solid #f3f3f3;
+  text-align: left;
+}
+.barcode-title{
+  font-size: 28rpx;
+  line-height: 36rpx;
+  color: #999;
+  padding:20rpx 40rpx;
+  margin-bottom: 20rpx;
+}
+.barcode-canvas{
+  height: 145rpx;
+  width: 566rpx;
+  margin: 0 auto;
+}
+.barcode-no{
+  margin: 12rpx ;
+  text-align: center;
+}
+.pay button{
+  background: #ff4c2c;
+  color: #fff;
+}

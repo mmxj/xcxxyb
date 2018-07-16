@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "TabBar": "../../components/tabbar/tabbar"
+    "TabBar": "../../components/tabbar/tabbar",
+    "Model" : "../../components/Model/Model"
   }
 }

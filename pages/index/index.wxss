@@ -58,6 +58,7 @@ swiper{
     justify-content:space-between;
     display: flex;
     padding: 20rpx;
+    line-height: 32rpx;
     border-bottom: 1rpx solid #f3f3f3;
 }
 .article .title-content{

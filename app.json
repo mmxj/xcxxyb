@@ -1,13 +1,21 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/login/login",
-    "pages/login/subpage/signUp/signUp",
-    "pages/login/subpage/forgetPassword/forgetPassword",
-    "pages/my/my",
-    "pages/logs/logs",
     "pages/paycode/paycode",
+    "pages/index/index",
+    "pages/my/subpage/myorder/myorder",
+    "pages/my/subpage/myorder/orderDetails/orderDetails",
+    "pages/my/subpage/cardbutler/cardbutler",
+    "pages/my/subpage/cardbutler/addNewCard/addNewCard",
+    "pages/my/my",
+    "pages/my/subpage/myaccount/myaccount",
+    "pages/my/subpage/myaccount/address/address",
+    "pages/my/subpage/myaccount/email/email",
+    "pages/login/login",
+    "pages/login/subpage/forgetPassword/forgetPassword",
+    "pages/login/subpage/signUp/signUp",
+    "pages/logs/logs",
     "pages/login/subpage/signUp/useragree/useragree"
+    
   ],
   "window": {
     "backgroundTextStyle": "light",

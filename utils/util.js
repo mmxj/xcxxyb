@@ -1,5 +1,6 @@
 
 const Ajax = require('./server.js');
+import md5 from './md5.js';
 const formatTime = date => {
   const year = date.getFullYear()
   const month = date.getMonth() + 1
@@ -15,20 +16,20 @@ const formatNumber = n => {
   n = n.toString()
   return n[1] ? n : '0' + n
 }
+const alert = (text,success) => {
+  wx.showModal({
+    title: '提示',
+    content: text,
+    confirmColor: "#27b7fe",
+    showCancel: false,
+    success:success
 
-const IsUserLogin=(app)=>{
-  console.log(app.globalData.user.status);
-  if (!app.globalData.user.status){
-    wx.navigateTo({
-      url: '/pages/login/login',
-    })
-
-  }
+  })
 }
-
 module.exports = {
   formatTime: formatTime,
   Ajax: Ajax,
-  IsUserLogin,
+  alert,
+  md5
 }
 

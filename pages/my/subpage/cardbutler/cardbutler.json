@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "卡管家",
+  "usingComponents": {
+    "Model": "/components/Model/Model"
+  }
+}

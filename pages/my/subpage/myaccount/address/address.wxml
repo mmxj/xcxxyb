@@ -1,0 +1,12 @@
+<!--pages/my/subpage/myaccount/address/address.wxml-->
+<view class="address-wrap">
+  <view class="list-wrap">
+    <view class="list">
+          <view class="list-text">地址</view>
+          <view class="list-text gray"><input value='{{address}}' bindinput='addressInput'></input></view>
+    </view>
+  </view>
+  <view class="button-wrap">
+    <button type="primary" bindtap='submit'>保持</button>
+  </view>
+</view>

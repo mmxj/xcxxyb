@@ -1,0 +1,18 @@
+<!--pages/my/subpage/myaccount/myaccount.wxml-->
+<view class="myaccount">
+    <view class="list-wrap">
+      <view class="list">
+         <view class="list-text">账户</view>
+         <view class="list-text gray">{{mobile}}</view>
+    
+      </view>
+       <view class="list">
+         <view class="list-text">邮箱</view>
+         <view class="list-text gray" bindtap='goPage' data-url = "/pages/my/subpage/myaccount/email/email?eamil={{email}}&id={{userId}}">{{email}} <image src="../../../../assets/img/enter.png"></image></view>
+      </view>
+      <view class="list">
+         <view class="list-text">地址</view>
+         <view class="list-text gray"  bindtap='goPage' data-url = "/pages/my/subpage/myaccount/address/address?address={{address}}&id={{userId}}">{{address}}  <image src="../../../../assets/img/enter.png"></image></view>
+      </view>
+    </view>
+</view>

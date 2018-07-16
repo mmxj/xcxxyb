@@ -4,22 +4,24 @@
     <image src="../../assets/img/login_img_logo@3x.png"></image>
     <view class="loginlogotitle">欢迎使用乡银保</view>
   </view>
+  <form bindsubmit='loginUp'>
   <view class="form-wrap">
       <view class="input-wrap">
         <image src="../../assets/img/login_icon_phone@3x.png"></image>
-        <input  maxlength="11" placeholder="请输入手机号码" />
+        <input  maxlength="11" placeholder="请输入手机号码" name="phone" />
       </view>
        <view class="input-wrap input-password">
         <image src="../../assets/img/login_icon_password@3x.png"></image>
-        <input  type="password" placeholder="请输入密码" />
+        <input  type="password" placeholder="请输入密码" name="password" />
       </view>
   </view>
   <view class="button-wrap">
-    <button type="primary">登录</button>
+    <button type="primary" form-type='submit'>登录</button>
     <view class="other-button">
       <view class="button-text" bindtap="goPage"      data-url="/pages/login/subpage/forgetPassword/forgetPassword">忘记密码?</view>
       <view class="button-text"bindtap="goPage"      data-url="/pages/login/subpage/signUp/signUp"
       >注册</view>
     </view>
   </view>
+  </form>
 </view>

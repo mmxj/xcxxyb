@@ -1,0 +1,9 @@
+<!--components/Model/Model.wxml-->
+<view class="Model" wx:if='{{propShow}}'>
+  <view class="model-content" style='height:{{height}}rpx'>
+    <view class="model-title">{{propTitle}} <view class="close"><image src="/assets/img/close.png" bindtap="closeModel" ></image></view></view>
+   <slot></slot>  
+  </view>
+  <view class="model-bg" bindtap='closeModel'></view>
+</view>
+

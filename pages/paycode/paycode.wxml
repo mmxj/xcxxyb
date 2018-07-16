@@ -1,11 +1,54 @@
 <!--pages/paycode/paycode.wxml-->
 <view class="container">
-  <scroll-view class="{{isIphoneX?'centerIphonex':'center'}}" scroll-y="{{true}}" >
-      付款码
+  <scroll-view class="{{isIphoneX?'centerIphonex':'center'}}" >
+     <view class="card" bindtap='chooseCard'>
+        <view class="cardTitle" wx:if="{{cardData}}">
+        <image wx:if="{{cardData.banklogo}}" src="../../assets/bank/logo/{{cardData.banklogo}}.png"></image> 
+          {{cardData.bankName}}({{cardData.accountlastFour}})
+        </view>
+        <view class="cardTitle"  wx:else >
+            暂无绑卡
+        </view>
+        <view class="chooseCard">换卡</view>
+     </view>
+     <view class="code">
+        <view class="barcode">
+          <canvas wx:if="{{!showCardlist}}" class="barCanvas" canvas-id='barcode'></canvas>
+          <image wx:else  class="barCanvas" src="../../assets/img/barcode.png"></image>
+          <view class="barCodecenter">{{qrCode}}</view>
+        </view>
+        <view class="line"><image src="../../assets/img/line.png"></image></view>
+        <view class="qrCode">
+          <canvas wx:if="{{!showCardlist}}"  class="qrCode" canvas-id='qrCode'></canvas>
+          <image wx:else  class="qrCode" src="../../assets/img/qrcode.png"></image>
+        </view>
+         <view class="qrCode-text"><image class="safeLogo" src="../../assets/img/safe.png"></image>银联金融安全机制,为您的安全支付护航           </view>
+     </view>
+
+    <view class='noSign' wx:if="{{nouser}}">
+      <view class="content">
+         <view class="content-text"> 您尚未登录 , 请登录 </view>
+         <button type='primary' class="login" bindtap='gopage'>登录</button>
+      </view>
+      <view class="bg"></view>
+    </view>
   </scroll-view>
   <view class="{{isIphoneX?'tabbarIphonex':'tabbar'}}">
     <TabBar></TabBar>
   </view>
+  <Model prop-show="{{showCardlist}}" prop-title="请选择付款银行卡" height="600" bind:onMyevent = "onMyevent">
+      <scroll-view class="list-wrap" scroll-y="{{true}}">
+        <view class="list" wx:for="{{card}}" wx:key="{{item.id}}" bindtap='changeCard' data-card='{{item}}'>
+          <view class="listcardname">
+            <image src="../../assets/bank/logo/{{item.banklogo}}.png"></image>
+            <view>{{item.bankName}}({{item.accountlastFour}})</view>
+          </view>
+          <view class="bankcardtype">
+            {{item.cardTypeName}}
+          </view>
+        </view>
+      </scroll-view> 
+  </Model> 
 </view>
 
 

@@ -74,3 +74,9 @@
   margin-right: 4rpx;
   transform:scale(0.5);
 }
+button.no-use{
+  background-color:#ccc;
+}
+button.no-use.button-hover{
+  background-color:#ccc;
+}

@@ -2,19 +2,19 @@
 <view class="container">
   <scroll-view class="{{isIphoneX?'centerIphonex':'center'}}" scroll-y="{{true}}" >
       <view class="topBar">
-        <view class="topBar-item">
+        <view class="topBar-item" bindtap='scan'>
             <view class="topBar-img">
               <image src="../../assets/img/my_icon_scan1.png"></image>
             </view>
             扫一扫
         </view>
-         <view class="topBar-item">
+         <view class="topBar-item" bindtap='goPage' data-url='/pages/my/subpage/myorder/myorder'>
             <view class="topBar-img">
               <image src="../../assets/img/my_icon_myorder1.png"></image>
             </view>
             我的订单
         </view>
-         <view class="topBar-item">
+         <view class="topBar-item" bindtap="goPage" data-url="/pages/my/subpage/cardbutler/cardbutler">
           <view class="topBar-img">
                 <image src="../../assets/img/my_icon_cardmanagement1.png"></image>
             </view>
@@ -22,7 +22,7 @@
         </view>
       </view> 
       <view class="mylistwrap">
-        <view class="mylist">
+        <view class="mylist"  bindtap="goPage" data-url="/pages/my/subpage/myaccount/myaccount">
             <view class="mylistcontent"> 
               <image src="../../assets/img/my_icon_myaccount.png"></image>
             我的账号</view>
@@ -32,12 +32,6 @@
             <view class="mylistcontent"> 
               <image src="../../assets/img/my_icon_mysocialsecurity@3x.png"></image>
             我的社保</view>
-            <view class="mylistenter"><image src="../../assets/img/enter.png"></image></view>
-        </view>
-        <view class="mylist">
-            <view class="mylistcontent"> 
-              <image src="../../assets/img/my_icon_medicaltransshipment@3x.png"></image>
-            医疗转运</view>
             <view class="mylistenter"><image src="../../assets/img/enter.png"></image></view>
         </view>
       </view> 

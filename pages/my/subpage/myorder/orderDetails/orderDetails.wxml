@@ -1,0 +1,40 @@
+<!--pages/my/subpage/myorder/orderDetails/orderDetails.wxml-->
+
+<view class="orderDetail">
+  <view class="top-card">
+    <view class="title">{{orderData.companyName?orderData.companyName:'其他商户'}}</view>
+    <view class="amount">￥{{orderData.amount?((orderData.amount)/100):''}}</view> 
+    <view class="status"> {{orderData.payStatusName}}</view>
+    <view class="list-item">
+        <view class="list-label">订单说明</view>
+        <view class="list-content">{{orderData.remark?orderData.remark:'无'}}</view>
+    </view>
+    <view class="list-item line">
+        <view class="list-label">订单类型</view>
+        <view class="list-content">{{orderData.businessTypeName?orderData.businessTypeName:'无'}}</view>
+    </view>
+     <view class="list-item">
+        <view class="list-label">订单时间</view>
+        <view class="list-content">{{orderData.sfsCreate}}</view>
+    </view>
+    <view class="list-item">
+        <view class="list-label">订单号</view>
+        <view class="list-content">
+          {{orderData.no}}
+        </view>
+    </view>
+  </view>
+  <view class="barcode" wx:if="{{showBarCode}}">
+    <view class="barcode-title">
+      撤销码
+    </view>
+    <canvas class="barcode-canvas" canvas-id="orderbarcode" />
+    <view class="barcode-no">{{orderData.id}}</view>
+  </view>
+  <view class="back-button pay" wx:if="{{orderData.payStatus==1}}">
+    <button>订单支付</button>
+  </view>
+  <view class="back-button"  wx:else>
+    <button type='primary' bindtap='goBack'>返回</button>
+  </view>
+</view>

@@ -2,7 +2,7 @@
 //获取应用实例
 const utils=require('../../utils/util.js');
 const Ajax=utils.Ajax;
-const app = getApp()
+const app = getApp();
 Page({
   data: {
     imgUrls: [
@@ -12,12 +12,13 @@ Page({
     ],
   },
   onLoad:function(){
+    app.globalData.chooseBar = 1;
     // console.log(app.globalData.isIphoneX)
     this.setData({
       isIphoneX: app.globalData.isIphoneX,
       
-    })
-    app.globalData.chooseBar = 1;
+    });
+    
     Ajax({
       router: '/ips/slider/get',
       data: {
@@ -26,7 +27,7 @@ Page({
       callback: (data) => {
         this.setData({ data: data.rows});
       },
-    })
+    });
     Ajax({
       router: '/ips/article/get',
       data: {

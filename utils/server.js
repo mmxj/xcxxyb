@@ -1,4 +1,7 @@
-import md5 from './md5.js'
+import md5 from './md5.js';
+import errorAlert from './erroralert';//请求错误处理
+const app = getApp();
+
 const Ajax = (opt) => {
   let setting = {//外部传进来的参数http://192.168.0.104
     // openUrl : "http://onlinepay.site:8091",//设置测试环境请求的域名
@@ -12,12 +15,12 @@ const Ajax = (opt) => {
 
     }
   }
-  let session = wx.getStorageSync('session');
-  console.log(session);
+  let session = app.globalData.user.session;
   if (opt.session) {
     if (!session) {
-      wx.navigateTo({
-        url: '/pages/index/index',
+      console.log(111,'尚未登陆请先登陆')
+      wx.redirectTo({
+        url: '/pages/login/login',
       })
       return
     }
@@ -56,7 +59,7 @@ const Ajax = (opt) => {
       timestamp + "&signature=" + makeSignature(session, data);
   }
   wx.showLoading({
-    title:'加载中',
+    title:'加载中...',
     mask:true
   })
   wx.request({
@@ -67,18 +70,15 @@ const Ajax = (opt) => {
       'content-type': 'application/json' // 默认值
     },
     success:function(data){
+      
       if (data.data.ret.errorCode === 0) {
           if(opt.callback){
             opt.callback(data.data);
           }
       } else {
-        wx.showModal({
-          title: '提示',
-          content: '请求错误' + data.data.ret.errorMessage,
-          showCancel: false,
-        })
+        errorAlert(data.data)
       }
-      wx.hideLoading()
+      wx.hideLoading();
     },
     fail:function(data){
       wx.showModal({
@@ -86,33 +86,11 @@ const Ajax = (opt) => {
         content: '请求错误' + data.data.ret.errorMessage,
         showCancel: false,
       })
-      console.log('失败',data.data.ret)
       wx.hideLoading()
     },
     complete:function(data){
-      wx.hideLoading()
+      wx.hideLoading();
     }
   })
-
-  /*
-   *contentType设置请求头
-   */
-  // axios.defaults.headers['Content-Type'] = 'application/json; charset=UTF-8';
-  // axios.post(url, data).then((res) => {
-
-  //   var data = JSON.parse(res.request.response);
-  //   if (data.ret.errorCode === 0) {
-  //     opt.callback(data);
-  //   } else {
-  //     errorAlert(data)
-  //   }
-  //   loading.toast.hide();
-  //   loading.show = true
-  // }).catch((res) => {
-  //   loading.toast.hide();
-  //   loading.show = true
-  //   console.log(res, '请求错误');
-
-  // })
 }
 module.exports =Ajax;
